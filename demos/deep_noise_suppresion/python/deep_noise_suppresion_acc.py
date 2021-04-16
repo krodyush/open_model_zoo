@@ -103,7 +103,7 @@ def main():
             return sample
 
         x_clean, x_noisy = read(f_clean), read(f_noisy)
-        assert x_clean.shape[0] == x_clean.shape[0]
+        assert x_clean.shape[0] == x_noisy.shape[0]
 
         #make both signals divisable by input_size
         patch_num, rest_size = divmod(x_noisy.shape[0], input_size)
